@@ -7,9 +7,9 @@
 {% block content %}
 <main id="content" role="main">
 
-  <a class="link-back" href="/single-brand/explain-prove-identity-reason">Back</a>
+  <a class="link-back" href="/single-brand/eu/dutch/registered/">Back</a>
 
-  <form action="/docs/tutorials-and-examples" method="post" class="form">
+  <form action="/single-brand/eu/dutch/registered/password" method="post" class="form">
 
     <h1 class="form-title heading-large">
       How do you want to login?
@@ -21,20 +21,22 @@
         <legend class="visually-hidden">Do you have a Dutch DigiD?</legend>
 
         <div class="multiple-choice">
-          <input id="radio-1" type="radio" name="registered" value="Yes">
+          <input id="radio-1" type="radio" name="login_type" value="password">
           <label for="radio-1">username and password</label>
         </div>
         <div class="multiple-choice">
-          <input id="radio-2" type="radio" name="registered" value="No">
+          <input id="radio-2" type="radio" name="login_type" value="text message">
           <label for="radio-2">username and text message</label>
         </div>
         <div class="multiple-choice">
-          <input id="radio-3" type="radio" name="registered" value="No">
+          <input id="radio-3" type="radio" name="login_type" value="mobile app">
           <label for="radio-3">DigiD mobile app</label>
         </div>
 
       </fieldset>
     </div>
+
+    <p><a href="/single-brand/eu/dutch/not-registered">Don't have any of these things</a></p>
 
     <div class="form-group">
       <input type="submit" class="button" value="Continue">

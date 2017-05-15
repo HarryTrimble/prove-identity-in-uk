@@ -1,0 +1,71 @@
+{% extends "layout-apply-ni-number.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <a class="link-back" href="/single-brand/explain-prove-identity-reason">Back</a>
+
+  <form action="/single-brand/eu/confirmation-page" method="post" class="form">
+
+    <h1 class="form-title heading-large">
+      How do you want to be contacted?
+    </h1>
+
+  <div class="form-group">
+    <fieldset>
+
+      <legend class="visually-hidden">How do you want to be contacted?</legend>
+
+      <div class="multiple-choice" data-target="contact-by-email">
+        <input id="example-contact-by-email" type="radio" name="how-to-contact" value="email">
+        <label for="example-contact-by-email">Email</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+        <label class="form-label" for="contact-email">Email address</label>
+        <input class="form-control" name="contact-email" type="text" id="contact-email">
+      </div>
+
+      <div class="multiple-choice" data-target="contact-by-text">
+        <input id="example-contact-by-text" type="radio" name="how-to-contact" value="text message">
+        <label for="example-contact-by-text">Text message</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+        <label class="form-label" for="contact-text-message">Mobile phone number</label>
+        <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+      </div>
+
+      <div class="multiple-choice" data-target="contact-by-letter">
+        <input id="example-contact-by-letter" type="radio" name="how-to-contact" value="letter">
+        <label for="example-contact-by-letter">Post</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-letter">
+        <label class="form-label-bold">Your address</label>
+        <div class="form-group">
+          <label class="form-label" for="first-name-2">Building and street</label>
+          <input class="form-control" id="first-name-2" name="first-name-2" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">Town or City</label>
+          <input class="form-control form-control-1-2" id="last-name-2" name="last-name-2" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">Postcode</label>
+          <input class="form-control form-control-1-4" id="last-name-2" name="last-name-2" type="text">
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

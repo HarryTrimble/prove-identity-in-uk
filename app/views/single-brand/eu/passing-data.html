@@ -1,0 +1,30 @@
+{% extends "layout-apply-ni-number.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+      <form action="/single-brand/eu/confirm-your-details" method="post" class="form">
+
+        <h1 class="form-title heading-large">
+          Dutch government is sending your data
+        </h1>
+
+        <p class="lede"><div class="loader"></div></p>
+
+      </form>
+
+</main>
+
+<script>
+  (function () {
+    window.setTimeout( function(){
+       window.location = "/single-brand/eu/confirm-your-details";
+    }, 5000 );
+  })();
+</script>
+
+{% endblock %}

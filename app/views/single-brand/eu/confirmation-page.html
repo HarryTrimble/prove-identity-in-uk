@@ -1,0 +1,34 @@
+{% extends "layout-apply-ni-number.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large" style="">Application successful</h1>
+        <p>
+          Your National Insurance number is<br>
+          <strong class="heading-xlarge">JG 67 13 10 S</strong>
+        </p>
+      </div>
+      <p>We have sent you a {{ data['how-to-contact'] }} with your National Insurance number in it.</p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>You can now start work and paying income tax</p>
+      <p><a href="#">Find out more about National Insurance numbers</a></p>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
