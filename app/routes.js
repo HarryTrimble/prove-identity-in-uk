@@ -94,7 +94,7 @@
 	  }
 	})
 
-	// /share-code/done-it-before
+	// /share-code/used-service-before
 
 	router.get('/share-code/login-from-last-time', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
@@ -106,6 +106,54 @@
 	  } else {
 	    // if user ONE nationality
 	    res.render('share-code/login-from-last-time.html')
+	  }
+	})
+
+	// /share-code/create-code/notify
+
+	router.get('/share-code/create-code/how-to-notify', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var notify = req.session.data['notify']
+
+	  if (notify === 'No' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/share-code/create-code/confirmation-page')
+	  } else {
+	    // if user ONE nationality
+	    res.render('share-code/create-code/how-to-notify.html')
+	  }
+	})
+
+	// /single-brand/eu/dutch/done-it-before
+
+	router.get('/share-code/eu/dutch/registered', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var done_it_before = req.session.data['done_it_before']
+
+	  if (done_it_before === 'No' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/share-code/eu/dutch/not-registered')
+	  } else {
+	    // if user ONE nationality
+	    res.render('share-code/eu/dutch/registered/index.html')
+	  }
+	})
+
+	// /share-code/eu/dutch/registered
+
+	router.get('/share-code/eu/dutch/registered/password', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var login_type = req.session.data['login_type']
+
+	  if (login_type === 'text message' ) {
+	    // if user wants to login with TEXT MESSAGE
+	    res.redirect('/share-code/eu/dutch/registered/text-message')
+	  } else if (login_type === "mobile app" ){
+	    // if user wants to login with MOBILE APP
+	    res.redirect('/share-code/eu/dutch/registered/mobile-app')
+	  } else {
+	    // if user wants to login with USERNAME and PASSWORD
+	    res.render('share-code/eu/dutch/registered/password/index.html')
 	  }
 	})
 

@@ -1,4 +1,4 @@
-{% extends "layout-apply-ni-number.html" %}
+{% extends "layout-share-code.html" %}
 
 {% block page_title %}
   Question page
@@ -15,7 +15,7 @@
       <h1 class="heading-large">Can we access your details from the Dutch government?
       </h1>
 
-      <form class="form" action="/single-brand/eu/dutch/done-it-before" method="post">
+      <form class="form" action="/share-code/eu/dutch/done-it-before" method="post">
 
         <p>We will access with the Dutch goverment your:</p>
 
@@ -24,19 +24,6 @@
           <li>date of birth</li>
           <li>nationality</li>
         </ul>
-        
-        <br>
-
-        <div class="notice">
-          <i class="icon icon-important">
-            <span class="visually-hidden">Warning</span>
-          </i>
-          <strong class="bold-small">
-            No information is shared back to the Dutch government</strong>
-        </div>
-
-        <br>
-        <br>
 
         <div class="form-group">
           <input class="button" type="submit" value="Yes - access these details">

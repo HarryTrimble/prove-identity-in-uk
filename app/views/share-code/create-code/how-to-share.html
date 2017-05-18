@@ -12,10 +12,10 @@
 
       <a class="link-back" href="/share-code/create-code/data-to-share">Back</a>
 
-      <form action="/share-code/create-code/confirmation-page" method="post" class="form">
+      <form action="/share-code/create-code/notify" method="post" class="form">
 
         <h1 class="form-title heading-large">
-          How do you want to share your details
+          How do you want to share your details?
         </h1>
 
       <div class="form-group">
@@ -24,21 +24,21 @@
           <legend class="visually-hidden">How should we send to you your National Insurance number?</legend>
 
           <div class="multiple-choice" data-target="contact-by-email">
-            <input id="example-contact-by-email" type="radio" name="how-to-contact" value="email">
-            <label for="example-contact-by-email">Email</label>
+            <input id="example-contact-by-email" type="radio" name="how_to_share" value="email">
+            <label for="example-contact-by-email">Email to someone</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
-            <label class="form-label" for="contact-email">Email address</label>
-            <input class="form-control" name="contact-email" type="text" id="contact-email">
+            <label class="form-label" for="contact-email">Their email address</label>
+            <input class="form-control" name="email-shared-with" type="text" id="email-shared-with">
           </div>
 
           <div class="multiple-choice" data-target="contact-by-text">
-            <input id="example-contact-by-text" type="radio" name="how-to-contact" value="text message">
+            <input id="example-contact-by-text" type="radio" name="how_to_share" value="text message">
             <label for="example-contact-by-text">Printable PDF</label>
           </div>
 
           <div class="multiple-choice" data-target="contact-by-letter">
-            <input id="example-contact-by-letter" type="radio" name="how-to-contact" value="letter">
+            <input id="example-contact-by-letter" type="radio" name="how_to_share" value="letter">
             <label for="example-contact-by-letter">just the code</label>
           </div>
 

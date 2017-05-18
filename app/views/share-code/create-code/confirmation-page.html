@@ -11,21 +11,51 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <div class="govuk-box-highlight" id="share-code-box">
-        <h4 class="heading-small">Your share code is:</h4>
-        <br>
-        <h1 class="bold-xlarge">hlq9zzfq</h1>
+      {% if data.how_to_share=="email" %}
 
-        <br>
+        <div class="govuk-box-highlight" id="share-code-box">
+          <h2 class="bold-large">You've sent a check code</h2>
 
-        <ul class="list list-bullet">
-          <li>valid for 21 days</li>
-          <li>can only be used once</li>
-        </ul>
+          <br>
+          <p>
+            to the email address<br>
+            <strong class="heading-medium">{{ data['email-shared-with'] }}</strong>
+          </p>
 
-        <h3 class="heading-medium"><a href="#">Print or save your code</a></h3>
+          <p>Your code is:</p>
 
-      </div>
+          <ul class="list list-bullet">
+            <li>valid for 21 days</li>
+            <li>can only be used once</li>
+          </ul>
+
+        </div>
+
+      {% else %}
+
+        <div class="govuk-box-highlight" id="share-code-box">
+          <h4 class="heading-small">Your share code is:</h4>
+          <br>
+          <h1 class="bold-xlarge">hlq9zzfq</h1>
+
+          <br>
+
+          <ul class="list list-bullet">
+            <li>valid for 21 days</li>
+            <li>can only be used once</li>
+          </ul>
+
+          <h3 class="heading-medium"><a href="#">Print or save your code</a></h3>
+
+        </div>
+
+      {% endif %}
+      
+      {% if data.notify=="Yes" %}
+
+        <p>We will {{ data['how_to_notify'] }} your when your code is checked.</p>
+
+      {% endif %}
 
       <h2 class="heading-medium">
         What to do with your code

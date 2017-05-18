@@ -6,29 +6,29 @@
 
 {% block content %}
 <main id="content" role="main">
+
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/single-brand/work-out-method/multiple-nationalities
-      ">Back</a>
+      <a class="link-back" href="/share-code/create-code/how-to-share">Back</a>
 
-      <form action="/share-code/work-out-method/result" method="post" class="form">
+      <form action="/share-code/create-code/how-to-notify" method="post" class="form">
 
         <h1 class="form-title heading-large">
-          Have you lived in the UK for 12 months or longer?
+          Do you want to be sent a message when someone checks your details?
         </h1>
 
         <div class="form-group">
           <fieldset>
 
-            <legend class="visually-hidden">Have you lived in the UK for 12 months or longer?</legend>
+            <legend class="visually-hidden">Do you want to be sent a message when someone checks your details?</legend>
 
             <div class="multiple-choice">
-              <input id="radio-1" type="radio" name="time_in_uk" value="more than a year">
+              <input id="radio-1" type="radio" name="notify" value="Yes">
               <label for="radio-1">Yes</label>
             </div>
             <div class="multiple-choice">
-              <input id="radio-2" type="radio" name="time_in_uk" value="less than a year">
+              <input id="radio-2" type="radio" name="notify" value="No">
               <label for="radio-2">No</label>
             </div>
 
@@ -40,9 +40,8 @@
         </div>
 
       </form>
-    
-    </div>
-  </div>    
 
+    </div>
+  </div>
 </main>
 {% endblock %}

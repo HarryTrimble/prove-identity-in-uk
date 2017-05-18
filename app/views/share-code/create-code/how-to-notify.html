@@ -1,0 +1,57 @@
+{% extends "layout-share-code.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/share-code/create-code/notify">Back</a>
+
+      <form action="/share-code/create-code/confirmation-page" method="post" class="form">
+
+        <h1 class="form-title heading-large">
+          How should we message you?
+        </h1>
+
+      <div class="form-group">
+        <fieldset>
+
+          <legend class="visually-hidden">How should we message you?</legend>
+
+          <div class="multiple-choice" data-target="contact-by-email">
+            <input id="example-contact-by-email" type="radio" name="how_to_notify" value="email">
+            <label for="example-contact-by-email">Email</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+            <label class="form-label" for="contact-email">Email address</label>
+            <input class="form-control" name="notify-email" type="text" id="contact-email">
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-text">
+            <input id="example-contact-by-text" type="radio" name="how_to_notify" value="text message">
+            <label for="example-contact-by-text">Text message</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+            <label class="form-label" for="contact-text-message">Mobile phone number</label>
+            <input class="form-control" name="notify-text-message" type="text" id="contact-text-message">
+          </div>
+
+        </fieldset>
+      </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>    
+
+</main>
+{% endblock %}
