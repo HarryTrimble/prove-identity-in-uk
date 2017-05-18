@@ -1,0 +1,46 @@
+{% extends "layout-share-code.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <a class="link-back" href="/share-code">Back</a>
+
+  <form action="/share-code/login-from-last-time" method="post" class="form">
+
+    <h1 class="form-title heading-large">
+      Have you used this service before?
+    </h1>
+
+    <div class="form-group">
+      <fieldset>
+
+        <legend class="visually-hidden">Have you used this service before?</legend>
+
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="used_service_before" value="Yes">
+          <label for="radio-1">Yes</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-2" type="radio" name="used_service_before" value="No">
+          <label for="radio-2">No</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-3" type="radio" name="used_service_before" value="Can't remember">
+          <label for="radio-3">Can't remember</label>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

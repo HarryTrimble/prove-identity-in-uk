@@ -1,0 +1,45 @@
+{% extends "layout-apply-ni-number.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/single-brand/eu/dutch/registered/mobile-app/login">Back</a>
+
+      <form action="/single-brand/eu/dutch/registered/mobile-app/pin-code" method="post" class="form">
+
+        <h1 class="form-title heading-large">
+          Scan code
+        </h1>
+
+        <p>Use DigiD app on your phone to scan this code:</p>
+
+        <div class="grid-row">
+          <div class="column-one-third">
+
+              <p><div id="qr8" class="da-code"></div></p>
+
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+<script>
+  (function () {
+    window.setTimeout( function(){
+       window.location = "/single-brand/eu/dutch/registered/mobile-app/pin-code";
+    }, 5000 );
+  })();
+</script>
+
+</main>
+{% endblock %}

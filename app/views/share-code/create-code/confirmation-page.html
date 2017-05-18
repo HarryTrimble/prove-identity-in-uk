@@ -1,0 +1,73 @@
+{% extends "layout-share-code.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight" id="share-code-box">
+        <h4 class="heading-small">Your share code is:</h4>
+        <br>
+        <h1 class="bold-xlarge">hlq9zzfq</h1>
+
+        <br>
+
+        <ul class="list list-bullet">
+          <li>valid for 21 days</li>
+          <li>can only be used once</li>
+        </ul>
+
+        <h3 class="heading-medium"><a href="#">Print or save your code</a></h3>
+
+      </div>
+
+      <h2 class="heading-medium">
+        What to do with your code
+      </h2>
+
+      <p>To share your identity information.</p>
+
+      <a class="button" href="#" role="button">Get another code</a>
+
+      <h2 class="heading-medium">
+        Active codes
+      </h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Details</th>
+            <th class="numeric" scope="col">Expiry date</th>
+            <th class="numeric" scope="col">Cancel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>hlq9zzfq</td>
+            <td><a href="#">view</a></td>
+            <td class="numeric">14 6 2017</td>
+            <td class="numeric"><a href="#">cancel</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="heading-medium">
+        Used and expired codes
+      </h2>
+
+      <p>There are no used or expired code(s) to view.</p>
+
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

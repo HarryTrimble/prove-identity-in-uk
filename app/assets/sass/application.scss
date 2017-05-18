@@ -30,6 +30,34 @@ $path: "/public/images/";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+
+// details table
+
+#details-table td {
+    border: #ffffff;
+}
+
+#share-code-box {
+    text-align: left;
+    padding-top: 18px;
+    padding-left: 18px;
+}
+
+#share-code-box h4 {
+    font-weight: 400;
+}
+
+#share-code-box h1 {
+    font-size: 80px;
+}
+
+#share-code-box a {
+    color: #ffffff;
+}
+
+
+// QR code styling
+
 $qrcolor: #000;
 .da-code{
   position:relative;

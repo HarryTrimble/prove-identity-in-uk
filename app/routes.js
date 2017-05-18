@@ -12,6 +12,8 @@
 
 	// Branching
 
+	// Route for //single-brand/choose-method/multiple-nationalites
+
 	router.get('/single-brand/choose-method/time-in-uk', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
 	  var multiple_nationalities = req.session.data['multiple_nationalities']
@@ -23,6 +25,22 @@
 	  } else {
 	    // if user ONE nationality
 	    res.render('single-brand/choose-method/time-in-uk')
+	  }
+	})
+
+	// Route for //share-code/work-out-method/multiple-nationalites
+
+	router.get('/share-code/work-out-method/time-in-uk', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var multiple_nationalities = req.session.data['multiple_nationalities']
+	  var other_nationality = req.session.data['other_nationality']
+
+	  if (multiple_nationalities === 'Yes' && other_nationality === undefined ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/share-code/work-out-method/other-nationality')
+	  } else {
+	    // if user ONE nationality
+	    res.render('share-code/work-out-method/time-in-uk')
 	  }
 	})
 
@@ -73,6 +91,21 @@
 	  } else {
 	    // if user wants to login with USERNAME and PASSWORD
 	    res.render('single-brand/eu/dutch/registered/password/index.html')
+	  }
+	})
+
+	// /share-code/done-it-before
+
+	router.get('/share-code/login-from-last-time', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var used_service_before = req.session.data['used_service_before']
+
+	  if (used_service_before === 'No' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/share-code/intro-page')
+	  } else {
+	    // if user ONE nationality
+	    res.render('share-code/login-from-last-time.html')
 	  }
 	})
 
