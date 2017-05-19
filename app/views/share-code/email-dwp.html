@@ -1,0 +1,35 @@
+{% extends "layout-apply-ni-number.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/share-code/used-service-before">Back</a>
+
+      <h1 class="heading-large">Prove your identity
+      </h1>
+
+      <form class="form" action="/share-code/work-out-method/nationality" method="post">
+
+        <p>To check if you're entitled to a National Insurance number we need to know who you are.</p>
+
+        <p>To give us your information:</p>
+
+        <ol class="list list-number">
+          <li>Create a code to <a target="_blank" href="/share-code">share your identity information</a></li>
+          <li>Email your information to <span class="bold">apply-ni-number@dwp.gov.uk</span></li>
+        </ol>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
