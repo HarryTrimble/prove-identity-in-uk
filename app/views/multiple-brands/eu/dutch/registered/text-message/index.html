@@ -1,38 +1,80 @@
-{% extends "layout-apply-ni-number.html" %}
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://digid.nl/inloggen -->
+<html class="javascript" lang="nl">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta content="Met uw persoonlijke DigiD kunt u zich identificeren op websites van de overheid. Zo weten overheidsinstellingen dat ze echt met u te maken hebben." name="description">
+      <meta content="DigiD, inloggen, aanvragen, activeren, Mijn DigiD" name="keywords">
+      <meta content="index, follow" name="robots">
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <meta name="csrf-param" content="authenticity_token">
+      <meta name="csrf-token" content="jy+eMNY4IPZuE3CMlDZVMH98PuP6Ot2RDML27Ntb3ArE+CfXvTJG9HubG+OYiEaZVABKzPpSVNdYBx3AHLIT7w==">
+      <title>DigiD: Inloggen | Inloggegevens</title>
+      <link href="https://digid.nl/assets/favicon-d4c86e0da24dd280f3512433fad60319.ico" rel="shortcut icon">
+      <link href="/public/stylesheets/dutch.css" media="screen" rel="stylesheet" type="text/css">
+      <script src="/public/javascripts/dutch.js"></script>
+      <!--[if lt IE 9]>
+      <script src="/assets/html5shiv-printshiv-e503d73a9ae2c0e4c2368bd2f43f26a0.js"></script>
+      <![endif]-->
+   </head>
+   <body onunload="" style="display: block;">
+      <div class="window">
+         <div class="content">
+            <header class="header">
+               <a href="https://digid.nl/"><img alt="Logo Rijksoverheid - Ga naar www.digid.nl" class="rijksoverheid-logo" title="Logo Rijksoverheid - Ga naar www.digid.nl" src="/public/images/dutch-gov-logo.png"></a>
+               <nav class="header-navigation">
+                  DigiD
+               </nav>
+               <nav class="header-menu"></nav>
+            </header>
+            <div class="main">
+               <img alt="Vignet DigiD" class="digid-logo" title="Vignet DigiD" src="/public/images/digid-logo.png">
+               <section class="main-content">
+                  <h1>Inloggen bij <strong>Apply for a National Insurance number (UK)</strong></h1>
+                  <form class="remember_login" id="new_authentication" action="/multiple-brands/passing-data" accept-charset="UTF-8" method="post">
+                     <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="jy+eMNY4IPZuE3CMlDZVMH98PuP6Ot2RDML27Ntb3ArE+CfXvTJG9HubG+OYiEaZVABKzPpSVNdYBx3AHLIT7w==">
+                     <header class="form__header">
+                        <div class="form__header__required-fields">Verplichte velden<span class="form__item__label__required">*</span></div>
+                     </header>
 
-{% block page_title %}
-  Question page
-{% endblock %}
-
-{% block content %}
-
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-      <a class="link-back" href="/single-brand/eu/dutch/registered">Back</a>
-
-      <h1 class="heading-large">Things you will need
-      </h1>
-
-      <form class="form" action="/single-brand/eu/dutch/registered/text-message/login" method="post">
-
-        <p>To login and access your identity details you will need:</p>
-
-        <ul class="list list-bullet">
-          <li>DigiD number</li>
-          <li>Password</li>
-          <li>phone you registered with DigiD</li>
-        </ul>
-
-        <div class="form-group">
-          <input class="button" type="submit" value="Continue to login">
-        </div>
-
-      </form>
-
-    </div>
-  </div>
-</main>
-
-{% endblock %}
+                     <div id="app_notice" class="block-with-icon--information" style="display: none;">
+                        <p>Let op! Deze inlogmethode is nieuw. Met de DigiD app kunt u eenvoudig en veilig inloggen. <a href="https://www.digid.nl/over-digid/app" target="_blank">Lees hoe u de DigiD app kunt installeren en activeren</a> [opent in een nieuw venster].</p>
+                     </div>
+                     <div class="normal-login">
+                        <fieldset class="form__item"><label class="form__item__label" for="authentication_digid_username">
+                        SMS-code
+<span class="form__item__label__required">*</span></label><input autocapitalize="none" class="form__item__field" autocomplete="off" spellcheck="false" data-required="true" type="text" name="authentication[digid_username]" id="authentication_digid_username"></fieldset>
+                     <div class="actions"><input type="submit" name="commit" value="voortzetten
+" class="actions__left--button" data-disable-with="Inloggen"><input type="submit" name="commit" value="Annuleren" class="actions__right--button" formnovalidate="formnovalidate"></div>
+                  </form>
+                  <ul class="list-with-arrows">
+                     <li id="forgot_password"><a href="https://digid.nl/herstellen">
+Heeft u geen SMS ontvangen?</a></li>
+                  </ul>
+                  <footer class="footer-questions">
+                  </footer>
+               </section>
+            </div>
+            <footer class="footer"></footer>
+            <div class="pageid-footer">
+               <div class="pageid-inner">
+                  <div class="pageid-left"></div>
+                  <div class="pageid-center"></div>
+                  <div class="pageid-right">
+                     <p class="page_id" data-primary="IN.10" data-secondary="IN.20.2">
+                        Pagina ID: 
+                        <span>IN.10</span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <nav class="service-menu">
+            <ul class="service-menu-items">
+               <li><a class="service-menu-link" href="https://www.digid.nl/burger/vraag-en-antwoord">Veelgestelde vragen</a></li>
+               <li><a class="service-menu-link" href="https://www.digid.nl/">www.digid.nl</a></li>
+            </ul>
+         </nav>
+      </div>
+   </body>
+</html>

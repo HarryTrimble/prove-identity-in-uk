@@ -1,0 +1,36 @@
+
+
+        {% if data['how-to-login']=="text message" %}
+
+          <script>
+            (function () {
+              window.setTimeout( function(){
+                 window.location = "/multiple-brands/eu/dutch/registered/text-message";
+              }, 1000 );
+            })();
+          </script>
+
+        {% elif data['how-to-login']=="mobile app" %}
+
+          <script>
+            (function () {
+              window.setTimeout( function(){
+                 window.location = "/multiple-brands/eu/dutch/registered/mobile-app/scan-code";
+              }, 1000 );
+            })();
+          </script>
+
+        {% else %}
+
+          <script>
+            (function () {
+              window.setTimeout( function(){
+                 window.location = "/multiple-brands/passing-data";
+              }, 1000 );
+            })();
+          </script>
+
+        {% endif %}
+
+        <p><div id="qr8" class="da-code"></div></p>
+

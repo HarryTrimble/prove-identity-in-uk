@@ -1,0 +1,55 @@
+{% extends "layout-apply-ni-number.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Confirm your identity details
+      </h1>
+
+      <br>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Details sent by Dutch government</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Name:</td>
+            <td>Jan Robin Reicht</td>
+          </tr>
+          <tr>
+            <td>Date of birth:</td>
+            <td>31 7 1988</td>
+          </tr>
+          <tr>
+           <td>Nationality:</td>
+            <td>Dutch</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+      <br>
+
+      <div class="form-group">
+        <a href="/multiple-brands/national-insurance/contact-details" class="button">Yes - these details are correct</a>
+      </div>
+
+      <p><a href="#">These details are wrong</a></p>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -30,21 +30,23 @@
             <div class="main">
                <img alt="Vignet DigiD" class="digid-logo" title="Vignet DigiD" src="/public/images/digid-logo.png">
                <section class="main-content">
-                  <h1>Inloggen bij <strong>Belastingdienst/Toeslagen</strong></h1>
+                  <h1>Inloggen bij <strong>Apply National Insurance Number (UK)</strong></h1>
                   <form class="remember_login" id="new_authentication" action="/multiple-brands/eu/dutch/registered/password" accept-charset="UTF-8" method="post">
                      <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="jy+eMNY4IPZuE3CMlDZVMH98PuP6Ot2RDML27Ntb3ArE+CfXvTJG9HubG+OYiEaZVABKzPpSVNdYBx3AHLIT7w==">
                      <header class="form__header">
                         <div class="form__header__required-fields">Verplichte velden<span class="form__item__label__required">*</span></div>
                      </header>
-                     <fieldset class="form__item"><label class="form__item__label" for="authentication_type_account">Inlogmethode<span class="form__item__label__required">*</span></label><input class="form__item__field--box" data-required="true" type="radio" value="basis" checked="checked" name="how-to-login" id="authentication_type_account_basis">
+                     <fieldset class="form__item">
 
                      <!-- password -->
-                     <label class="form__item__box-label" for="authentication_type_account_basis">Ik wil inloggen met alleen gebruikersnaam en wachtwoord</label><input class="form__item__field--box" data-required="true" type="radio" value="midden" name="how-to-login" id="authentication_type_account_midden">
-                     
-                     <!-- text message -->
-                     <label class="form__item__box-label" for="authentication_type_account_midden">Ik wil inloggen met een extra controle via sms</label><input class="form__item__field--box" data-required="true" type="radio" value="midden_via_strawberry" name="how-to-login" id="authentication_type_account_midden_via_app">
+                     <label class="form__item__label" for="authentication_type_account">Inlogmethode<span class="form__item__label__required">*</span></label><input class="form__item__field--box" data-required="true" type="radio" checked="checked" value="password" name="how-to-login" id="authentication_type_account_basis">
 
-                     <!-- app -->
+                     <!-- text message -->
+                     <label class="form__item__box-label" for="authentication_type_account_basis">Ik wil inloggen met alleen gebruikersnaam en wachtwoord</label><input class="form__item__field--box" data-required="true" type="radio" value="text message" name="how-to-login" id="authentication_type_account_midden">
+                     
+                     <!-- mobile app -->
+                     <label class="form__item__box-label" for="authentication_type_account_midden">Ik wil inloggen met een extra controle via sms</label><input class="form__item__field--box" data-required="true" type="radio" value="mobile app" name="how-to-login" id="authentication_type_account_midden_via_app">
+
                      <label class="form__item__box-label" for="authentication_type_account_midden_via_app">Ik wil inloggen met de DigiD app</label></fieldset>
                      <div id="app_notice" class="block-with-icon--information" style="display: none;">
                         <p>Let op! Deze inlogmethode is nieuw. Met de DigiD app kunt u eenvoudig en veilig inloggen. <a href="https://www.digid.nl/over-digid/app" target="_blank">Lees hoe u de DigiD app kunt installeren en activeren</a> [opent in een nieuw venster].</p>
