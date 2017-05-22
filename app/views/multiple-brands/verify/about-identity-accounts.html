@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="content-inner slides">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <figure>
+          <img srcset="/public/images/verify-logo.svg">
+        </figure>
+      </div>
+      <div class="column-two-thirds">
+        
+
+<form id="start-page-form" class="js-validate" novalidate="novalidate" action="/multiple-brands/verify/work-out-method" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="x/hWlpvpKEE5dIvwDg5AdIKhuv81pj5VPpcPrIpq6QRC/oK58kgtUmuGdY3O4z7WyYPgypv+HIlYnjSldoIX5A==">
+
+  <p>Verifying your identity takes about 15 minutes to complete, but you only have to do it once.
+
+  <p>You’ll then have an identity account with the certified company.</p>
+
+  <p>You can then access other government services in less than 1 minute wherever you see the GOV.UK Verify logo.</p>
+
+  <div id="validation-error-message-js"></div>
+
+  <div class="form-group-tight">
+    <div class="actions">
+      <input type="submit" name="commit" value="Next" class="button" id="next-button">
+    </div>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+
+
+</main>
+
+{% endblock %}

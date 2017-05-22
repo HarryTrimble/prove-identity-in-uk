@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="content-inner slides">
+    <div class="grid-row">
+      <div class="column-one-third">
+        <figure>
+          <img srcset="/public/images/verify-logo.svg">
+        </figure>
+      </div>
+      <div class="column-two-thirds">
+        
+
+<form id="start-page-form" class="js-validate" novalidate="novalidate" action="/multiple-brands/verify/about-certified-companies" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="x/hWlpvpKEE5dIvwDg5AdIKhuv81pj5VPpcPrIpq6QRC/oK58kgtUmuGdY3O4z7WyYPgypv+HIlYnjSldoIX5A==">
+
+  <p>GOV.UK Verify is a secure service built to fight the growing problem of online identity theft.</p>
+
+  <p>DWP uses Verify to help prevent other people from getting your National Insurance number, as it stops someone from pretending to be you.</p>
+
+  <div id="validation-error-message-js"></div>
+
+  <div class="form-group-tight">
+    <div class="actions">
+      <input type="submit" name="commit" value="Next" class="button" id="next-button">
+    </div>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+
+
+</main>
+
+{% endblock %}

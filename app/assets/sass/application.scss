@@ -67,6 +67,122 @@ $path: "/public/images/";
     margin-right: 10px;
 }
 
+.company-logo {
+    height: 90px;
+}
+
+// Verify blue box
+
+.slides {
+    background-color: #005ea5;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 480px;
+    padding: 30px
+}
+@media (min-width: 641px) {
+    .slides {
+        margin-top: 30px
+    }
+}
+@media (min-width: 641px) {
+    .slides {
+        padding: 45px
+    }
+}
+@media (min-width: 769px) {
+    .slides {
+        padding: 75px 70px
+    }
+}
+.slides h1 {
+    margin-top: 0;
+    margin-bottom: 30px
+}
+@media (max-width: 640px) {
+    .slides h1 {
+        margin-top: 15px;
+        margin-bottom: 15px
+    }
+}
+.slides p,
+.slides ul {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2
+}
+@media (min-width: 641px) {
+    .slides p,
+    .slides ul {
+        font-size: 24px;
+        line-height: 1.25
+    }
+}
+.slides a,
+.slides a:focus,
+.slides a:hover,
+.slides a:active {
+    color: inherit
+}
+.slides .multiple-choice>label::before,
+.slides .multiple-choice>label::after {
+    background-color: #fff;
+    border-color: #0b0c0c
+}
+.slides .actions {
+    margin: 30px 0 15px
+}
+.slides .actions .button {
+    background: #fff;
+    color: #005ea5;
+    font-weight: bold
+}
+.slides figure {
+    max-width: 200px
+}
+.slides figure img {
+    width: 100%
+}
+@media (max-width: 640px) {
+    .slides figure {
+        width: 40%
+    }
+}
+.slides details summary {
+    color: #fff
+}
+.slides details .panel {
+    border-left-color: #fff
+}
+.slides details p,
+.slides details ul {
+    font-size: 1em
+}
+
+
+.list-companies {
+    margin-bottom: 15px
+}
+.list-companies li {
+    display: -moz-inline-stack;
+    display: inline-block;
+    width: 50%
+}
+@media (min-width: 641px) {
+    .list-companies li {
+        width: 24%
+    }
+}
+.list-companies img {
+    width: 100%
+}
+
 
 // QR code styling
 

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/multiple-brands/verify/work-out-method/select-phone" method="post" class="form">
+
+        <h1 class="form-title heading-large">
+          Your photo identity document
+        </h1>
+
+        <p>Certified companies use information from identity documents to verify you.</p>
+
+        <div class="panel panel-border-wide">
+          <p>
+            The more identity documents you can provide now, the more likely it is that the company can verify you successfully.
+          </p>
+        </div>
+
+        <h2 class="heading-medium">Do you have a valid UK photocard driving licence, full or provisional?</h2>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Do you already have a personal user account?</legend>
+
+            <div class="multiple-choice">
+              <input id="radio-inline-1" type="radio" name="driving-licence" value="Yes">
+              <label for="radio-inline-1">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-inline-2" type="radio" name="driving-licence" value="No">
+              <label for="radio-inline-2">No</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <h2 class="heading-medium">Do you have a UK passport?</h2>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visually-hidden">Do you already have a personal user account?</legend>
+
+            <div class="multiple-choice">
+              <input id="radio-inline-1" type="radio" name="passport" value="Yes">
+              <label for="radio-inline-1">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-inline-2" type="radio" name="passport" value="No">
+              <label for="radio-inline-2">No</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

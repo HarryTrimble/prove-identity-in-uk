@@ -175,5 +175,41 @@
 	  }
 	})
 
+	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
+
+	router.get('/multiple-brands/verify/work-out-method/result', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var multiple_nationalities = req.session.data['multiple_nationalities']
+	  var other_nationality = req.session.data['other_nationality']
+	  var time_in_uk = req.session.data['time_in_uk']
+	  var mobile_phone = req.session.data['mobile_phone']
+
+	  if (multiple_nationalities === 'Yes' && other_nationality === undefined ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/multiple-brands/verify/work-out-method/other-nationality')
+	  } else if (time_in_uk === "more than a year" && mobile_phone === undefined ){
+	    // if user wants to login with MOBILE APP
+	    res.redirect('/multiple-brands/verify/work-out-method/select-documents')	  
+	  } else {
+	    // if user ONE nationality
+	    res.render('multiple-brands/verify/work-out-method/result')
+	  }
+	})
+
+	// Route for /multiple-brands/eu/dutch/done-it-before
+
+	router.get('/multiple-brands/eu/dutch/redirect', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var done_it_before = req.session.data['done_it_before']
+
+	  if (done_it_before === 'No' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/multiple-brands/eu/dutch/not-registered')
+	  } else {
+	    // if user ONE nationality
+	    res.render('multiple-brands/eu/dutch/redirect')
+	  }
+	})
+
 	module.exports = router
 

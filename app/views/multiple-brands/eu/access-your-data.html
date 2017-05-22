@@ -1,4 +1,4 @@
-{% extends "layout-apply-ni-number.html" %}
+{% extends "layout.html" %}
 
 {% block page_title %}
   Question page
@@ -10,12 +10,10 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/single-brand/choose-method/result">Back</a>
-
       <h1 class="heading-large">Can we access your details from the Dutch government?
       </h1>
 
-      <form class="form" action="/single-brand/eu/dutch/done-it-before" method="post">
+      <form class="form" action="/multiple-brands/eu/dutch/done-it-before" method="post">
 
         <p>We will access your:</p>
 
@@ -42,7 +40,7 @@
           <input class="button" type="submit" value="Yes - access these details">
         </div>
 
-        <a href="#">Try a different way to prove my identity</a>
+        <a href="/multiple-brands/verify/work-out-method/result">Try a different way to prove my identity</a>
 
       </form>
 

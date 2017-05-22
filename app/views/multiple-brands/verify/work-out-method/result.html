@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Prove your identity in the UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds"> 
+
+      <h1 class="heading-medium">Choose a way to prove your identity
+      </h1>
+
+      <form class="form" action="/share-code/eu/access-your-data" method="post">
+
+        <p>Based on your answers, 7 companies can verify you now:.</p>
+
+        <p><a href="#">Why there’s a choice of companies</a></p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <img src="/public/images/logos/royal-mail.png" class="company-logo">
+              </td>
+              <td><a class="button" href="#" role="button">Choose Royal Mail</a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/public/images/logos/post-office.png" class="company-logo">
+              </td>
+              <td><a class="button" href="#" role="button">Choose Post Office</a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/public/images/logos/citizensafe.png" class="company-logo">
+              </td>
+              <td><a class="button" href="#" role="button">Choose CitizenSafe</a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/public/images/logos/experian.png" class="company-logo">
+              </td>
+              <td><a class="button" href="#" role="button">Choose Experian</a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/public/images/logos/morpho.png" class="company-logo">
+              </td>
+              <td><a class="button" href="#" role="button">Choose SecureIdentity</a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/public/images/logos/digidentity.png" class="company-logo">
+              </td>
+              <td><a class="button" href="#" role="button">Choose Digidentity</a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/public/images/logos/barclays.png" class="company-logo">
+              </td>
+              <td><a class="button" href="#" role="button">Choose Barclays</a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="/public/images/logos/eu-flag.png" class="company-logo">
+              </td>
+              <td><a class="button" href="/multiple-brands/eu/access-your-data" role="button">Choose Dutch identity details</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
