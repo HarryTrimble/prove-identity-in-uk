@@ -157,5 +157,23 @@
 	  }
 	})
 
+	// /share-code/eu/dutch/registered
+
+	router.get('/share-code/eu/dutch/registered/password', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var how_to_login = req.session.data['how_to_login']
+
+	  if (how_to_login === 'text message' ) {
+	    // if user wants to login with TEXT MESSAGE
+	    res.redirect('/share-code/eu/dutch/registered/text-message')
+	  } else if (how_to_login === "mobile app" ){
+	    // if user wants to login with MOBILE APP
+	    res.redirect('/share-code/eu/dutch/registered/mobile-app')
+	  } else {
+	    // if user wants to login with USERNAME and PASSWORD
+	    res.render('share-code/eu/dutch/registered/password/index.html')
+	  }
+	})
+
 	module.exports = router
 

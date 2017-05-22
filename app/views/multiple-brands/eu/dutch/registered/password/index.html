@@ -1,4 +1,4 @@
-{% extends "layout-apply-ni-number.html" %}
+{% extends "layout.html" %}
 
 {% block page_title %}
   Question page
@@ -24,11 +24,24 @@
           <li>Password</li>
         </ul>
 
+        <p>{{ data['how-to-login'] }} data from previous page input</p>
+
+        {% if data['how-to-login']=="midden_via_strawberry" %}
+
+          <p>This worked</p>
+
+        {% else %}
+
+          <p>Not working</p>
+
+        {% endif %}
+
         <div class="form-group">
           <input class="button" type="submit" value="Continue to login">
         </div>
 
       </form>
+
 
     </div>
   </div>
