@@ -50,18 +50,38 @@
         </div>
 
       {% endif %}
-      
-      {% if data.notify=="Yes" %}
 
-        <p>We will {{ data['how_to_notify'] }} your when your code is checked.</p>
+
+      {% if data.how_to_share=="email" %}
+
+        <h2 class="heading-medium">
+          What happens next
+        </h2>
+
+        <p>The person you've emailed the code to has 21 days to check it.</p>
+
+
+        {% if data.notify=="Yes" %}
+
+          <p>We will {{ data['how_to_notify'] }} your when your code is checked or expires.</p>
+
+        {% endif %}
+
+        <p>You can have up to 15 active codes at any given time.</p>
+
+      {% else %}
+
+        <h2 class="heading-medium">
+          What to do with your code
+        </h2>
+
+        <p>To share your identity information you need to provide the check code and your full name to the person you want to share it with.</p>
+
+        <p>You code will be valid for 21 days</p>
+
+        <p>You can have up to 15 active codes at any given time.</p>
 
       {% endif %}
-
-      <h2 class="heading-medium">
-        What to do with your code
-      </h2>
-
-      <p>To share your identity information.</p>
 
       <a class="button" href="#" role="button">Get another code</a>
 

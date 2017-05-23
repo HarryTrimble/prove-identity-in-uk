@@ -25,7 +25,8 @@
 
         <table>
           <tbody>
-            {% if data.time_in_uk=="less than a year" %}
+
+            {% if data.time_in_uk=="more than a year" %}
 
               <tr>
                 <td>
@@ -45,6 +46,18 @@
                 </td>
                 <td><a class="button" href="#" role="button">Choose CitizenSafe</a></td>
               </tr>
+
+            {% endif %}
+
+            <tr>
+              <td>
+                <img src="/public/images/digid-logo.png" id="digid-logo">
+              </td>
+              <td><a class="button" href="/multiple-brands/eu/access-your-data" role="button">Choose Dutch identity details</a></td>
+            </tr>
+
+            {% if data.time_in_uk=="more than a year" %}
+
               <tr>
                 <td>
                   <img src="/public/images/logos/experian.png" class="company-logo">
@@ -71,12 +84,6 @@
               </tr>
 
             {% endif %}
-            <tr>
-              <td>
-                <img src="/public/images/logos/eu-flag.png" class="company-logo">
-              </td>
-              <td><a class="button" href="/multiple-brands/eu/access-your-data" role="button">Choose Dutch identity details</a></td>
-            </tr>
           </tbody>
         </table>
 
