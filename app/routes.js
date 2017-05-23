@@ -177,19 +177,29 @@
 
 	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
 
+	router.get('/multiple-brands/verify/work-out-method/select-documents', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var time_in_uk = req.session.data['time_in_uk']
+
+	  if (time_in_uk === 'less than a year' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/multiple-brands/verify/work-out-method/nationality')	  
+	  } else {
+	    // if user ONE nationality
+	    res.render('multiple-brands/verify/work-out-method/select-documents')
+	  }
+	})
+
+	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
+
 	router.get('/multiple-brands/verify/work-out-method/result', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
 	  var multiple_nationalities = req.session.data['multiple_nationalities']
 	  var other_nationality = req.session.data['other_nationality']
-	  var time_in_uk = req.session.data['time_in_uk']
-	  var mobile_phone = req.session.data['mobile_phone']
 
 	  if (multiple_nationalities === 'Yes' && other_nationality === undefined ) {
 	    // if user DOES mutiple nationalities
-	    res.redirect('/multiple-brands/verify/work-out-method/other-nationality')
-	  } else if (time_in_uk === "more than a year" && mobile_phone === undefined ){
-	    // if user wants to login with MOBILE APP
-	    res.redirect('/multiple-brands/verify/work-out-method/select-documents')	  
+	    res.redirect('/multiple-brands/verify/work-out-method/other-nationality')	  
 	  } else {
 	    // if user ONE nationality
 	    res.render('multiple-brands/verify/work-out-method/result')

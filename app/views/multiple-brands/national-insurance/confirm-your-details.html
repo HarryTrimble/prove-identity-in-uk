@@ -1,7 +1,7 @@
 {% extends "layout-apply-ni-number.html" %}
 
 {% block page_title %}
-  Check your answers
+  Confirm your details
 {% endblock %}
 
 {% block content %}
@@ -16,27 +16,7 @@
 
       <br>
 
-      <table>
-        <thead>
-          <tr>
-            <th colspan="2">Details sent by Dutch government</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Name:</td>
-            <td>Jan Robin Reicht</td>
-          </tr>
-          <tr>
-            <td>Date of birth:</td>
-            <td>31 7 1988</td>
-          </tr>
-          <tr>
-           <td>Nationality:</td>
-            <td>Dutch</td>
-          </tr>
-        </tbody>
-      </table>
+      {% include "includes/user-details.html" %}
 
       <br>
       <br>
