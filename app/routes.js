@@ -14,7 +14,20 @@
 
 	// Route for //single-brand/choose-method/multiple-nationalites
 
-	router.get('/single-brand/choose-method/time-in-uk', function (req, res) {
+	router.get('/single-brand/choose-method/select-documents', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var time_in_uk = req.session.data['time_in_uk']
+
+	  if (time_in_uk === 'less than a year' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/single-brand/choose-method/nationality')	  
+	  } else {
+	    // if user ONE nationality
+	    res.render('single-brand/choose-method/select-documents')
+	  }
+	})
+
+	router.get('/single-brand/choose-method/result', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
 	  var multiple_nationalities = req.session.data['multiple_nationalities']
 	  var other_nationality = req.session.data['other_nationality']
@@ -24,7 +37,7 @@
 	    res.redirect('/single-brand/choose-method/other-nationality')
 	  } else {
 	    // if user ONE nationality
-	    res.render('single-brand/choose-method/time-in-uk')
+	    res.render('single-brand/choose-method/result')
 	  }
 	})
 
