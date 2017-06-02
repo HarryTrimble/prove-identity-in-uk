@@ -12,13 +12,23 @@
     <div class="column-two-thirds">
 
       <div class="govuk-box-highlight">
-        <h1 class="bold-large" style="">Application successful</h1>
+        <h1 class="bold-large" style="">National Insurance number sent</h1>
         <p>
-          Your National Insurance number is<br>
-          <strong class="heading-xlarge">JG 67 13 10 S</strong>
+          to the {{ data['how-to-contact'] }}<br>
+      {% if data.how-to-contact=="email" %}
+          <strong class="heading-xlarge">harrytrimble@gmail.com</strong>
+      {% elif data.how-to-contact=="phone number" %}
+          <strong class="heading-xlarge">07760816534</strong>
+      {% else %}
+          <strong class="heading-xlarge">
+            10 Haggard Road<br>
+            Twickenham<br>
+            TW1 3AF
+          </strong>
+      {% endif %}
+
         </p>
       </div>
-      <p>We have sent you a {{ data['how-to-contact'] }} with your National Insurance number in it.</p>
 
       <h2 class="heading-medium">What happens next</h2>
       <p>You can now start work and paying income tax</p>
