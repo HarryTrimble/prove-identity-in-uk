@@ -91,19 +91,19 @@
 
 	// /single-brand/eu/dutch/registered
 
-	router.get('/single-brand/eu/dutch/registered/password', function (req, res) {
+	router.get('/single-brand/eu/dutch/registered/password/login', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
 	  var login_type = req.session.data['login_type']
 
 	  if (login_type === 'text message' ) {
 	    // if user wants to login with TEXT MESSAGE
-	    res.redirect('/single-brand/eu/dutch/registered/text-message')
+	    res.redirect('/single-brand/eu/dutch/registered/text-message/login')
 	  } else if (login_type === "mobile app" ){
 	    // if user wants to login with MOBILE APP
-	    res.redirect('/single-brand/eu/dutch/registered/mobile-app')
+	    res.redirect('/single-brand/eu/dutch/registered/mobile-app/login')
 	  } else {
 	    // if user wants to login with USERNAME and PASSWORD
-	    res.render('single-brand/eu/dutch/registered/password/index.html')
+	    res.render('single-brand/eu/dutch/registered/password/login.html')
 	  }
 	})
 
@@ -154,19 +154,19 @@
 
 	// /share-code/eu/dutch/registered
 
-	router.get('/share-code/eu/dutch/registered/password', function (req, res) {
+	router.get('/share-code/eu/dutch/registered/password/login', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
 	  var login_type = req.session.data['login_type']
 
 	  if (login_type === 'text message' ) {
 	    // if user wants to login with TEXT MESSAGE
-	    res.redirect('/share-code/eu/dutch/registered/text-message')
+	    res.redirect('/share-code/eu/dutch/registered/text-message/login')
 	  } else if (login_type === "mobile app" ){
 	    // if user wants to login with MOBILE APP
-	    res.redirect('/share-code/eu/dutch/registered/mobile-app')
+	    res.redirect('/share-code/eu/dutch/registered/mobile-app/login')
 	  } else {
 	    // if user wants to login with USERNAME and PASSWORD
-	    res.render('share-code/eu/dutch/registered/password/index.html')
+	    res.render('share-code/eu/dutch/registered/password/login.html')
 	  }
 	})
 

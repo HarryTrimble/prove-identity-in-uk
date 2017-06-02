@@ -7,24 +7,29 @@
 {% block content %}
 <main id="content" role="main">
 
-  <a class="link-back" href="/multiple-brands/verify/work-out-method/time-in-uk">Back</a>
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-  <form action="/multiple-brands/verify/work-out-method/multiple-nationalities" method="post" class="form">
 
-    <h1 class="form-title heading-large">
-      What is your nationality?
-    </h1>
+      <a class="link-back" href="/multiple-brands/verify/work-out-method/time-in-uk">Back</a>
 
-    <!-- Full name -->
-    <div class="form-group">
-      <input name="nationality" type="text" class="form-control form-control" id="full-name">
+      <form action="/multiple-brands/verify/work-out-method/multiple-nationalities" method="post" class="form">
+
+        {% include "includes/nationality.html" %}
+
+        <!-- Full name -->
+        <div class="form-group">
+          <input name="nationality" type="text" class="form-control form-control" id="full-name">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+    
     </div>
-
-    <div class="form-group">
-      <input type="submit" class="button" value="Continue">
-    </div>
-
-  </form>
+  </div>
 
 </main>
 {% endblock %}

@@ -7,24 +7,28 @@
 {% block content %}
 <main id="content" role="main">
 
-  <a class="link-back" href="/single-brand/choose-method/select-phone">Back</a>
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-  <form action="/single-brand/choose-method/multiple-nationalities" method="post" class="form">
+      <a class="link-back" href="/single-brand/choose-method/select-phone">Back</a>
 
-    <h1 class="form-title heading-large">
-      What is your nationality?
-    </h1>
+      <form action="/single-brand/choose-method/multiple-nationalities" method="post" class="form">
 
-    <!-- Full name -->
-    <div class="form-group">
-      <input name="nationality" type="text" class="form-control form-control" id="full-name">
+        {% include "includes/nationality.html" %}
+
+        <!-- Full name -->
+        <div class="form-group">
+          <input name="nationality" type="text" class="form-control form-control" id="full-name">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+    
     </div>
-
-    <div class="form-group">
-      <input type="submit" class="button" value="Continue">
-    </div>
-
-  </form>
+  </div>
 
 </main>
 {% endblock %}
