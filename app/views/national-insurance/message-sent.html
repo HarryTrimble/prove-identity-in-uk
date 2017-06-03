@@ -16,14 +16,14 @@
         <p>
           to the {{ data['how_to_contact'] }}<br>
       {% if data.how_to_contact=="email" %}
-          <strong class="heading-xlarge">harrytrimble@gmail.com</strong>
+          <strong class="heading-medium">{{ data['contact-email'] }}</strong>
       {% elif data.how_to_contact=="phone number" %}
-          <strong class="heading-xlarge">07760816534</strong>
+          <strong class="heading-large">{{ data['contact-text-message'] }}</strong>
       {% else %}
-          <strong class="heading-xlarge">
-            10 Haggard Road<br>
-            Twickenham<br>
-            TW1 3AF
+          <strong class="heading-medium">
+            {{ data['address-building-street'] }}<br>
+            {{ data['address-town-city'] }}<br>
+            {{ data['address-postcode'] }}
           </strong>
       {% endif %}
 
