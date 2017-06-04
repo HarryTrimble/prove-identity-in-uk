@@ -1,0 +1,35 @@
+{% extends "layout-send.html" %}
+
+{% block page_title %}
+  Confirm your details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Details sent by Dutch Government
+      </h1>
+
+      <br>
+
+      {% include "includes/user-details.html" %}
+
+      <br>
+      <br>
+
+      <div class="form-group">
+        <a href="/send/email" class="button">Send your identity information</a>
+      </div>
+
+    <!-- <p><a href="#">These details are wrong</a></p> -->
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

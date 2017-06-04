@@ -1,0 +1,54 @@
+{% extends "layout-share-code.html" %}
+
+{% block page_title %}
+  Share your details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Details sent by Dutch Government 
+      </h1>
+
+      <br>
+
+      {% include "includes/user-details.html" %}
+
+      <h2 class="heading-medium">
+        Get a identity share code
+      </h2>
+
+      <p>You can give a share code to someone who needs proof of who you are.</p> 
+
+      <p>The share code gives someone permission to <a href="/share-code/check-code-start-page">check your details from GOV.UK.</a></p>
+
+      <p>A code can only be checked once.</p>
+
+      <p>Your code will be valid for 21 days.</p>
+
+      <div class="form-group">
+        <a href="/share-code/create-code/data-to-share" class="button">Get a code</a>
+      </div>
+
+      <h2 class="heading-medium">
+        Active codes
+      </h2>
+
+      <p>There are no active code(s) to view.</p>
+
+      <h2 class="heading-medium">
+        Used and expired codes
+      </h2>
+
+      <p>There are no used or expired code(s) to view.</p>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
