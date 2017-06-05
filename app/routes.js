@@ -177,19 +177,19 @@
 
 	// Route for /share-code/eu/dutch/registered
 
-	router.get('/share-code/eu/dutch/registered/password', function (req, res) {
+	router.get('/share-code/eu/dutch/registered/password/login', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
-	  var how_to_login = req.session.data['how_to_login']
+	  var login_type = req.session.data['login_type']
 
-	  if (how_to_login === 'text message' ) {
+	  if (login_type === 'text message' ) {
 	    // if user wants to login with TEXT MESSAGE
-	    res.redirect('/share-code/eu/dutch/registered/text-message')
-	  } else if (how_to_login === "mobile app" ){
+	    res.redirect('/share-code/eu/dutch/registered/text-message/login')
+	  } else if (login_type === "mobile app" ){
 	    // if user wants to login with MOBILE APP
-	    res.redirect('/share-code/eu/dutch/registered/mobile-app')
+	    res.redirect('/share-code/eu/dutch/registered/mobile-app/login')
 	  } else {
 	    // if user wants to login with USERNAME and PASSWORD
-	    res.render('share-code/eu/dutch/registered/password/index.html')
+	    res.render('share-code/eu/dutch/registered/password/login.html')
 	  }
 	})
 
@@ -210,6 +210,21 @@
 
 	// SEND routes
 
+	// Route for /send/used-service-before
+
+	router.get('/send/login-from-last-time', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var used_service_before = req.session.data['used_service_before']
+
+	  if (used_service_before === 'No' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/send/intro-page')
+	  } else {
+	    // if user ONE nationality
+	    res.render('send/login-from-last-time.html')
+	  }
+	})
+
 	// Route for /send/work-out-method/multiple-nationalites
 
 	router.get('/send/work-out-method/time-in-uk', function (req, res) {
@@ -226,18 +241,21 @@
 	  }
 	})
 
-	// Route for /send/used-service-before
+	// Route for /send/eu/dutch/registered
 
-	router.get('/send/login-from-last-time', function (req, res) {
+	router.get('/send/eu/dutch/registered/password/login', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
-	  var used_service_before = req.session.data['used_service_before']
+	  var login_type = req.session.data['login_type']
 
-	  if (used_service_before === 'No' ) {
-	    // if user DOES mutiple nationalities
-	    res.redirect('/send/intro-page')
+	  if (login_type === 'text message' ) {
+	    // if user wants to login with TEXT MESSAGE
+	    res.redirect('/send/eu/dutch/registered/text-message/login')
+	  } else if (login_type === "mobile app" ){
+	    // if user wants to login with MOBILE APP
+	    res.redirect('/send/eu/dutch/registered/mobile-app/login')
 	  } else {
-	    // if user ONE nationality
-	    res.render('send/login-from-last-time.html')
+	    // if user wants to login with USERNAME and PASSWORD
+	    res.render('send/eu/dutch/registered/password/login.html')
 	  }
 	})
 
