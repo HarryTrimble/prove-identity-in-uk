@@ -1,0 +1,43 @@
+{% extends "layout-send.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <h1 class="form-title heading-large">
+          Enter pin code into your phone
+        </h1>
+
+    </div>
+  </div>
+
+        <div class="column-one-half">
+
+        <p><img src="/public/images/pin-code.png"></p>
+
+        <p class="lede">For example, 35324</p>
+
+        <p class="lede">You would have set your pin when you first registered for DigiD.</p>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+<script>
+  (function () {
+    window.setTimeout( function(){
+       window.location = "/send/passing-data";
+    }, 10000 );
+  })();
+</script>
+
+{% endblock %}

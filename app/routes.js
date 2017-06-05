@@ -10,7 +10,40 @@
 	  res.render('index')
 	})
 
-	// Branching
+	// MULTIPLE-BRANDS routes
+
+	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
+
+	router.get('/multiple-brands/verify/work-out-method/select-documents', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var time_in_uk = req.session.data['time_in_uk']
+
+	  if (time_in_uk === 'less than a year' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/multiple-brands/verify/work-out-method/nationality')	  
+	  } else {
+	    // if user ONE nationality
+	    res.render('multiple-brands/verify/work-out-method/select-documents')
+	  }
+	})
+
+	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
+
+	router.get('/multiple-brands/verify/work-out-method/result', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var multiple_nationalities = req.session.data['multiple_nationalities']
+	  var other_nationality = req.session.data['other_nationality']
+
+	  if (multiple_nationalities === 'Yes' && other_nationality === undefined ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/multiple-brands/verify/work-out-method/other-nationality')	  
+	  } else {
+	    // if user ONE nationality
+	    res.render('multiple-brands/verify/work-out-method/result')
+	  }
+	})
+
+	// SINGLE-BRAND routes
 
 	// Route for //single-brand/choose-method/multiple-nationalites
 
@@ -42,24 +75,6 @@
 	    res.render('single-brand/choose-method/result')
 	  }
 	})
-
-	// Route for /share-code/work-out-method/multiple-nationalites
-
-	router.get('/share-code/work-out-method/time-in-uk', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
-	  var multiple_nationalities = req.session.data['multiple_nationalities']
-	  var other_nationality = req.session.data['other_nationality']
-
-	  if (multiple_nationalities === 'Yes' && other_nationality === undefined ) {
-	    // if user DOES mutiple nationalities
-	    res.redirect('/share-code/work-out-method/other-nationality')
-	  } else {
-	    // if user ONE nationality
-	    res.render('share-code/work-out-method/time-in-uk')
-	  }
-	})
-
-	// Dutch journey
 
 	// /single-brand/eu/dutch/done-it-before
 
@@ -109,7 +124,25 @@
 	  }
 	})
 
-	// /share-code/used-service-before
+	// SHARE-CODE routes
+
+	// Route for /share-code/work-out-method/multiple-nationalites
+
+	router.get('/share-code/work-out-method/time-in-uk', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var multiple_nationalities = req.session.data['multiple_nationalities']
+	  var other_nationality = req.session.data['other_nationality']
+
+	  if (multiple_nationalities === 'Yes' && other_nationality === undefined ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/share-code/work-out-method/other-nationality')
+	  } else {
+	    // if user ONE nationality
+	    res.render('share-code/work-out-method/time-in-uk')
+	  }
+	})
+
+	// Route for /share-code/used-service-before
 
 	router.get('/share-code/login-from-last-time', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
@@ -121,36 +154,6 @@
 	  } else {
 	    // if user ONE nationality
 	    res.render('share-code/login-from-last-time.html')
-	  }
-	})
-
-	// /share-code/create-code/notify
-
-	router.get('/share-code/create-code/how-to-notify', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
-	  var notify = req.session.data['notify']
-
-	  if (notify === 'No' ) {
-	    // if user DOES mutiple nationalities
-	    res.redirect('/share-code/create-code/confirmation-page')
-	  } else {
-	    // if user ONE nationality
-	    res.render('share-code/create-code/how-to-notify.html')
-	  }
-	})
-
-	// /single-brand/eu/dutch/done-it-before
-
-	router.get('/share-code/eu/dutch/registered', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
-	  var done_it_before = req.session.data['done_it_before']
-
-	  if (done_it_before === 'No' ) {
-	    // if user DOES mutiple nationalities
-	    res.redirect('/share-code/eu/dutch/not-registered')
-	  } else {
-	    // if user ONE nationality
-	    res.render('share-code/eu/dutch/registered/index.html')
 	  }
 	})
 
@@ -190,34 +193,51 @@
 	  }
 	})
 
-	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
+	// Route for /send/email/notify
 
-	router.get('/multiple-brands/verify/work-out-method/select-documents', function (req, res) {
+	router.get('/share-code/create-code/how-to-notify', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
-	  var time_in_uk = req.session.data['time_in_uk']
+	  var notify = req.session.data['notify']
 
-	  if (time_in_uk === 'less than a year' ) {
+	  if (notify === 'No' ) {
 	    // if user DOES mutiple nationalities
-	    res.redirect('/multiple-brands/verify/work-out-method/nationality')	  
+	    res.redirect('/share-code/create-code/confirmation-page')
 	  } else {
 	    // if user ONE nationality
-	    res.render('multiple-brands/verify/work-out-method/select-documents')
+	    res.render('share-code/create-code/how-to-notify.html')
 	  }
 	})
 
-	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
+	// SEND routes
 
-	router.get('/multiple-brands/verify/work-out-method/result', function (req, res) {
+	// Route for /send/work-out-method/multiple-nationalites
+
+	router.get('/send/work-out-method/time-in-uk', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
 	  var multiple_nationalities = req.session.data['multiple_nationalities']
 	  var other_nationality = req.session.data['other_nationality']
 
 	  if (multiple_nationalities === 'Yes' && other_nationality === undefined ) {
 	    // if user DOES mutiple nationalities
-	    res.redirect('/multiple-brands/verify/work-out-method/other-nationality')	  
+	    res.redirect('/send/work-out-method/other-nationality')
 	  } else {
 	    // if user ONE nationality
-	    res.render('multiple-brands/verify/work-out-method/result')
+	    res.render('send/work-out-method/time-in-uk')
+	  }
+	})
+
+	// Route for /send/used-service-before
+
+	router.get('/send/login-from-last-time', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var used_service_before = req.session.data['used_service_before']
+
+	  if (used_service_before === 'No' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/send/intro-page')
+	  } else {
+	    // if user ONE nationality
+	    res.render('send/login-from-last-time.html')
 	  }
 	})
 

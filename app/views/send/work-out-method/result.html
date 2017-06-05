@@ -1,0 +1,123 @@
+{% extends "layout-send.html" %}
+
+{% block page_title %}
+  Prove your identity in the UK
+{% endblock %}
+
+{% block content %}
+
+{% if data.time_in_uk=="more than a year" %}
+  
+  <main id="content" role="main">
+    <div class="grid-row">
+      <div class="column-two-thirds"> 
+
+        <h1 class="heading-medium">Choose a way to prove your identity
+        </h1>
+
+        <form class="form" action="/send/access-your-data" method="post">
+
+          <p>Based on your answers, these are the ways you can verify:</p>
+
+          {% if data.time_in_uk=="more than a year" %}
+          
+            <p><a href="#">Why there’s a choice of companies</a></p>
+
+          {% endif %}
+
+          <table>
+            <tbody>
+
+              {% if data.time_in_uk=="more than a year" %}
+
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/royal-mail.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Royal Mail</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/post-office.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Post Office</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/citizensafe.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose CitizenSafe</a></td>
+                </tr>
+
+              {% endif %}
+
+              <tr>
+                <td>
+                  <img src="/public/images/digid-logo.png" id="digid-logo">
+                </td>
+                <td><a class="button" href="/send/access-your-data" role="button">Choose Dutch identity details</a></td>
+              </tr>
+
+              {% if data.time_in_uk=="more than a year" %}
+
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/experian.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Experian</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/morpho.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose SecureIdentity</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/digidentity.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Digidentity</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/barclays.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Barclays</a></td>
+                </tr>
+
+              {% endif %}
+            </tbody>
+          </table>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+{% else %}
+
+  <main id="content" role="main">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">Use Dutch identity details
+        </h1>
+
+        <form class="form" action="/send/access-your-data" method="post">
+
+          <p class="lede">Based on your answers the quickest way to access your details is getting them from the Dutch government.</p>
+
+          <div class="form-group">
+            <input class="button" type="submit" value="Continue">
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+{% endif %}
+
+{% endblock %}

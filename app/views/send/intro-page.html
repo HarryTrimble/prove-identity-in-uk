@@ -1,0 +1,29 @@
+{% extends "layout-send.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/send/used-service-before">Back</a>
+
+      <form class="form" action="/send/work-out-method/nationality" method="post">
+
+        {% include "includes/reason-to-access.html" %}
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue to questions">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
