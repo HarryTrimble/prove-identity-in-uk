@@ -234,5 +234,20 @@
 	  }
 	})
 
+	// /send/email/notify
+
+	router.get('/send/email/how-to-notify', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var notify = req.session.data['notify']
+
+	  if (notify === 'No' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/send/email/confirmation-page')
+	  } else {
+	    // if user ONE nationality
+	    res.render('send/email/how-to-notify.html')
+	  }
+	})
+
 	module.exports = router
 

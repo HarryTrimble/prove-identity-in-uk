@@ -1,0 +1,67 @@
+{% extends "layout-send.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <div class="govuk-box-highlight" id="share-code-box">
+          <h2 class="bold-large">You've sent your details</h2>
+
+          <br>
+
+          <p>
+            to the email address<br>
+            <strong class="heading-medium">{{ data['someones-email'] }}</strong>
+          </p>
+
+          <p>Your email is:</p>
+
+          <ul class="list list-bullet">
+            <li>valid for 30 days</li>
+            <li>can only be viewed once</li>
+          </ul>
+
+        </div>
+
+        {% if data.notify=="Yes" %}
+
+          <p>We will {{ data['how_to_notify'] }} your when your information is checked.</p>
+
+        {% endif %}
+
+      <a class="button" href="#" role="button">Send to someone else</a>
+
+      <h2 class="heading-medium">
+        Who can see your identity information
+      </h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Sent to</th>
+            <th scope="col">When</th>
+            <th class="numeric" scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ data['someones-email'] }}</td>
+            <td>today</td>
+            <td class="numeric"><a href="#">stop access</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
