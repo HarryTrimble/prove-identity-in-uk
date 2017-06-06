@@ -1,42 +1,77 @@
-{% extends "layout.html" %}
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <!-- This disables auto detection of phone numbers in some clients. Remove if not needed. -->
+    <meta name="format-detection" content="telephone=no"> 
+    <title>Page title</title>
+</head>
+<body style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;margin: 0;color:#0b0c0c">
 
-{% block page_title %}
-  Confirmation page example
-{% endblock %}
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td width="100%" height="53" bgcolor="#0b0c0c">
+            <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                    <td width="70" bgcolor="#0b0c0c" valign="middle">
+                        <!-- This asset should be hosted by the service -->
+                        <a href="https://www.gov.uk" style="text-decoration: none;"><img src="https://raw.githubusercontent.com/alphagov/email-template/master/crown-32px.gif" alt="" height="32" border="0"></a>
+                    </td>
+                    <td width="100%" bgcolor="#0b0c0c" valign="middle" align="left">
+                        <span style="padding-left: 5px;"><a href="https://www.gov.uk" style="font-family: Helvetica, Arial, sans-serif; font-size: 28px; line-height: 1.315789474; font-weight: 700; color: #efefef; text-decoration: none;">GOV.UK</a></span></a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
-{% block content %}
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin-bottom: 19px">
+        <tr>
+            <td width="100%">
+                <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
+                    <tr>
+                        <td width="75%">
 
-<main id="content" role="main">
+                            <h1 style="font-family: Helvetica, Arial, sans-serif; font-size: 36px; line-height: 1.315789474; font-weight: 700; margin: 19px 0 38px 0;">
+                                Check someone's identity details
+                            </h1>
 
-  <div style="background: #DEE0E2; padding: 0 0 18px 18px;">
+                            <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 30px 0 30px 0;">
+                                Jan Robin Reicht has sent you their identity information to check:
+                            </p>
 
-  <a class="link-back" href="/send/email" style="background: ">Back</a>
+                            <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+                                <a href="/send/email/magic-link">https://www.check-identity-details.service.gov.uk/hs4593twf325</a>
+                            </p>
 
-  <p>This is what someone see when you send your details</p>
+                            <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 30px 0 30px 0;">
+                                This link:
+                            </p>                            
 
-  </div>
+                            <ul style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+                                <li>valid for 30 days</li>
+                                <li>can only be viewed once</li>
+                            </ul>
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+                            <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">
+                                For more information vist: 
+                                <!-- URLs have white-space: nowrap so that they don't wrap -->
+                                <a style="white-space: nowrap; font-family: Helvetica, Arial, sans-serif;" href="#">https://www.gov.uk/service-start-page</a>
+                            </p>
 
-        <h1 class="heading-large">Jan Robin Reicht</h1>
-        
-      <table id="details-table">
-        <tbody>
-          <tr>
-            <td>Date of birth:</td>
-            <td>31 July 1988</td>
-          </tr>
-          <tr>
-           <td>Nationality:</td>
-            <td>Dutch</td>
-          </tr>
-        </tbody>
-      </table>
+                            <p style="font-family: Helvetica, Arial, sans-serif; font-weight: 700; font-size: 19px; line-height: 1.315789474; margin: 38px 0 38px 0;">
+                                Cabinet Office
+                            </p>
 
-    </div>
-  </div>
+                        </td>
+                    <td width="25%">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
-</main>
+</body>
 
-{% endblock %}
+</html>
