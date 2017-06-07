@@ -40,13 +40,20 @@
           <li>nationality</li>
         </uL>
 
-        <p>You can send a email with a link that prove's your identity to someone.</p>
+        <p>You can send an email with a link that prove's your identity to someone.</p>
 
         <p>For example when opening a bank account, paying council tax or getting a phone contract.</p>
 
-        <p>
-          <a class="button button-start" href="/send/used-service-before" role="button">Start now</a>
-        </p>
+        <form action="/send/data-to-share" method="post" class="form">
+
+          <!-- define journey -->
+          <input type="hidden" name="journey" value="send">
+
+          <div class="form-group">
+            <input type="submit" class="button button-start" value="Start now">
+          </div>
+
+        </form>
 
         <h2 class="heading-medium">Before you start</h2>
 

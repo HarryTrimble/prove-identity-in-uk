@@ -1,0 +1,25 @@
+{% extends "layout-vary.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form class="form" action="/single-brand/eu/dutch/registered" method="post">
+
+        {% include "includes/consent.html" %}
+
+        <a href="/multiple-brands/verify/work-out-method/result">Try a different way to prove my identity</a>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

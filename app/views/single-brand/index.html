@@ -29,9 +29,16 @@
 
       {% include "includes/ni-number-start.html" %}
 
-      <p>
-        <a class="button button-start" href="/single-brand/intro-page" role="button">Start now</a>
-      </p>
+      <form action="/single-brand/intro-page" method="post" class="form">
+
+        <!-- define journey -->
+        <input type="hidden" name="journey" value="single-brand">
+
+        <div class="form-group">
+          <input type="submit" class="button button-start" value="Start now">
+        </div>
+
+      </form>
 
     </div>
     <div class="column-third">

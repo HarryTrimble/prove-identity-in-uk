@@ -10,36 +10,73 @@
 	  res.render('index')
 	})
 
-	// MULTIPLE-BRANDS routes
+	// WORK-OUT-METHOD routes
 
-	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
+	// Route for /work-out-method/multiple-nationalites
 
-	router.get('/multiple-brands/verify/work-out-method/select-documents', function (req, res) {
+	router.get('/work-out-method/select-documents', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
 	  var time_in_uk = req.session.data['time_in_uk']
 
 	  if (time_in_uk === 'less than a year' ) {
 	    // if user DOES mutiple nationalities
-	    res.redirect('/multiple-brands/verify/work-out-method/nationality')	  
+	    res.redirect('/work-out-method/nationality')	  
 	  } else {
 	    // if user ONE nationality
-	    res.render('multiple-brands/verify/work-out-method/select-documents')
+	    res.render('work-out-method/select-documents')
 	  }
 	})
 
-	// Route for /multiple-brands/verify/work-out-method/multiple-nationalites
+	// Route for /work-out-method/multiple-nationalites
 
-	router.get('/multiple-brands/verify/work-out-method/result', function (req, res) {
+	router.get('/work-out-method/result', function (req, res) {
+
+		console.log("multiple_nationalities");
+
 	  // get the answer from the query string (eg. ?over18=false)
 	  var multiple_nationalities = req.session.data['multiple_nationalities']
 	  var other_nationality = req.session.data['other_nationality']
 
 	  if (multiple_nationalities === 'Yes' && other_nationality === undefined ) {
 	    // if user DOES mutiple nationalities
-	    res.redirect('/multiple-brands/verify/work-out-method/other-nationality')	  
+	    res.redirect('/work-out-method/other-nationality')	  
 	  } else {
 	    // if user ONE nationality
-	    res.render('multiple-brands/verify/work-out-method/result')
+	    res.render('work-out-method/result')
+	  }
+	})
+
+	// Route for /access-your-data
+
+	router.get('/single-brand/eu/dutch/registered', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var journey = req.session.data['journey']
+
+	  if (journey === 'multiple-brands' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/multiple-brands/eu/dutch/redirect')	 
+	  } else {
+	    // if user ONE nationality
+	    res.render('single-brand/eu/dutch/registered/index.html')
+	  }
+	})
+
+	router.get('/multiple-brands/verify/account-created', function (req, res) {
+	  // get the answer from the query string (eg. ?over18=false)
+	  var journey = req.session.data['journey']
+
+	  if (journey === 'single-brand' ) {
+	    // if user DOES mutiple nationalities
+	    res.redirect('/single-brand/confirm-your-details')
+	  } else if (journey === "share-code" ){
+	    // if user wants to login with MOBILE APP
+	    res.redirect('/share-code/confirm-your-details')
+	  } else if (journey === "send" ){
+	    // if user wants to login with MOBILE APP
+	    res.redirect('/send/confirm-your-details')	 
+	  } else {
+	    // if user ONE nationality
+	    res.render('multiple-brands/verify/account-created/index.html')
 	  }
 	})
 
@@ -150,7 +187,7 @@
 
 	  if (used_service_before === 'No' ) {
 	    // if user DOES mutiple nationalities
-	    res.redirect('/share-code/intro-page')
+	    res.redirect('/share-code/data-to-share')
 	  } else {
 	    // if user ONE nationality
 	    res.render('share-code/login-from-last-time.html')
@@ -218,7 +255,7 @@
 
 	  if (used_service_before === 'No' ) {
 	    // if user DOES mutiple nationalities
-	    res.redirect('/send/intro-page')
+	    res.redirect('/send/data-to-share')
 	  } else {
 	    // if user ONE nationality
 	    res.render('send/login-from-last-time.html')

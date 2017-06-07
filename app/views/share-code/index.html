@@ -40,9 +40,11 @@
         <li>nationality</li>
       </uL>
 
-      <p>Create a identity 'check code' to share your details with someone. 
+      <p>Create an identity 'check code' to share your details with someone. 
 
-      <p>For example when opening a bank account, paying tax or getting a phone contract.</p>
+      <p>A 'check code' gives someone permission to <a href="/share-code/check-code-start-page">check your details from GOV.UK.</a></p>
+
+      <p>For example when opening a bank account, paying council tax or getting a phone contract.</p>
 
       <p>The 'check code' will be valid for 21 days.</p>
 
@@ -54,10 +56,17 @@
         <li>online bank login details</li>
         <li>home country ID. For example Dutch DigiD</li>
       </uL>
+      
+      <form action="/share-code/used-service-before" method="post" class="form">
 
-      <p>
-        <a class="button button-start" href="/share-code/used-service-before" role="button">Start now</a>
-      </p>
+        <!-- define journey -->
+        <input type="hidden" name="journey" value="share-code">
+
+        <div class="form-group">
+          <input type="submit" class="button button-start" value="Start now">
+        </div>
+
+      </form>
 
       <h2 class="heading-medium">Before you start</h2>
 

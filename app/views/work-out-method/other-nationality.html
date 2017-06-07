@@ -1,0 +1,34 @@
+{% extends "layout-vary.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <a class="link-back" href="/work-out-method/other-nationalities">Back</a>
+
+        <form action="/work-out-method/result" method="post" class="form">
+
+          <h1 class="form-title heading-large">
+            What is your other nationality?
+          </h1>
+
+          {% include "includes/pick-other-nationality.html" %}
+
+          <br>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+
+        </form>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

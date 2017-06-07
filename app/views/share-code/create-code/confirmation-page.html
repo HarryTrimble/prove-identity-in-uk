@@ -51,6 +51,11 @@
 
       {% endif %}
 
+      {% if data.notify=="Yes" %}
+
+        <p>We will {{ data['how_to_notify'] }} you when your information is checked.</p>
+
+      {% endif %}
 
       {% if data.how_to_share=="email" %}
 
