@@ -9,18 +9,23 @@
   <li>nationality</li>
 </ul>
 
-<br>
+{% if data.journey=="multiple-brands" or data.journey=="single-brands"  %}
 
-<div class="notice">
-  <i class="icon icon-important">
-    <span class="visually-hidden">Warning</span>
-  </i>
-  <strong class="bold-small">
-   Your tax information will not be shared with the Dutch government</strong>
-</div>
+	<br>
 
-<br>
-<br>
+	<div class="notice">
+	  <i class="icon icon-important">
+	    <span class="visually-hidden">Warning</span>
+	  </i>
+	  <strong class="bold-small">
+	   Your information will not be shared with the Dutch government
+	  </strong>
+	</div>
+
+	<br>
+	<br>
+
+{% endif %}
 
 <div class="form-group">
   <input class="button" type="submit" value="Yes - access these details">
