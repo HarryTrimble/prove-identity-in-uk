@@ -15,44 +15,48 @@
       <form action="/share-code/intro-page" method="post" class="form">
 
         <h1 class="form-title heading-large">
-          What information do you need to share?
+          Why are you sharing your information?
         </h1>
-
-        <p>Select all that apply:</p>
 
       <div class="form-group">
         <fieldset>
 
-          <legend class="visually-hidden">What information do you need to share?</legend>
+          <legend class="visually-hidden">What details do you want to share?</legend>
 
-          <div class="multiple-choice" data-target="contact-by-text">
-            <input id="example-contact-by-text" type="checkbox" name="specify_data" value="data of birth">
-            <label for="example-contact-by-text">First name</label>
-          </div>
+          <p>This works out what data needs to be shared.</p>
 
           <div class="multiple-choice" data-target="contact-by-email">
-            <input id="example-contact-by-email" type="checkbox" name="specify_data" value="name">
-            <label for="example-contact-by-email">Surname</label>
-          </div>
-
-          <div class="multiple-choice" data-target="contact-by-letter">
-            <input id="example-contact-by-letter" type="checkbox" name="specify_data" value="nationality">
-            <label for="example-contact-by-letter">Date of birth</label>
+            <input id="example-contact-by-email" type="radio" name="data_to_share" value="open a bank account">
+            <label for="example-contact-by-email">Open a bank account</label>
           </div>
 
           <div class="multiple-choice" data-target="contact-by-text">
-            <input id="example-contact-by-text" type="checkbox" name="specify_data" value="data of birth">
-            <label for="example-contact-by-text">Place of birth</label>
+            <input id="example-contact-by-text" type="radio" name="data_to_share" value="rent a property">
+            <label for="example-contact-by-text">Rent a property</label>
           </div>
 
           <div class="multiple-choice" data-target="contact-by-letter">
-            <input id="example-contact-by-letter" type="checkbox" name="specify_data" value="nationality">
-            <label for="example-contact-by-letter">Current address</label>
+            <input id="example-contact-by-letter" type="radio" name="data_to_share" value="pay council tax">
+            <label for="example-contact-by-letter">Pay council tax</label>
           </div>
 
-          <div class="multiple-choice" data-target="contact-by-email">
-            <input id="example-contact-by-email" type="checkbox" name="specify_data" value="name">
-            <label for="example-contact-by-email">ID number</label>
+          <div class="multiple-choice" data-target="contact-by-letter">
+            <input id="example-contact-by-letter" type="radio" name="data_to_share" value="register with a GP">
+            <label for="example-contact-by-letter">Register with a GP</label>
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-letter">
+            <input id="example-contact-by-letter" type="radio" name="data_to_share" value="get a phone contract">
+            <label for="example-contact-by-letter">Get a phone contract</label>
+          </div>
+
+          <div class="multiple-choice" data-target="other">
+            <input id="example-contact-by-letter" type="radio" name="data_to_share" value="other">
+            <label for="example-contact-by-letter">Something else</label>
+          </div>
+
+          <div class="panel panel-border-narrow js-hidden" id="other">
+            <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
           </div>
 
         </fieldset>
