@@ -12,9 +12,10 @@
     <div class="column-two-thirds">
 
       <div class="govuk-box-highlight">
-        <h1 class="bold-large" style="">National Insurance number sent</h1>
+        <p style="padding-bottom: 0px; margin-bottom: 0px;">Your National Insurance number</p>
+        <h1 class="bold-xlarge" style="">JG 67 13 10 S</h1>
         <p>
-          to the {{ data['how_to_contact'] }}<br>
+          send to the {{ data['how_to_contact'] }}<br>
       {% if data.how_to_contact=="email" %}
           <strong class="heading-medium">{{ data['contact-email'] }}</strong>
       {% elif data.how_to_contact=="phone number" %}

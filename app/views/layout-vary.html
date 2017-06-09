@@ -18,18 +18,22 @@
           {# Set serviceName in config.js. Use a block to override on a page. #}
           {% block service_name %}
             
+            <!-- data defined hidden input on /multiple-brands/index.html -->
             {% if data.journey=="multiple-brands" %}
               <!-- blank like Verify header -->
             {% endif %}
-
+            
+            <!-- data defined hidden input on /single-brand/index.html -->
             {% if data.journey=="single-brand" %}
               Apply for a National Insurance number
             {% endif %}
-
+            
+            <!-- data defined hidden input on /share-code/index.html -->
             {% if data.journey=="share-code" %}
               Share your identity information
             {% endif %}
 
+            <!-- data defined hidden input on /send/index.html -->
             {% if data.journey=="send" %}
               Send your identity details to someone 
             {% endif %}

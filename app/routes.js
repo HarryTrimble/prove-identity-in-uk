@@ -15,14 +15,14 @@
 	// Route for /work-out-method/multiple-nationalites
 
 	router.get('/work-out-method/select-documents', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
+
 	  var time_in_uk = req.session.data['time_in_uk']
 
 	  if (time_in_uk === 'less than a year' ) {
-	    // if user DOES mutiple nationalities
+	    // if user has been in uk MORE than a year
 	    res.redirect('/work-out-method/nationality')	  
 	  } else {
-	    // if user ONE nationality
+	    // if user has been in UK MORE than a year
 	    res.render('work-out-method/select-documents')
 	  }
 	})
@@ -31,9 +31,6 @@
 
 	router.get('/work-out-method/result', function (req, res) {
 
-		console.log("multiple_nationalities");
-
-	  // get the answer from the query string (eg. ?over18=false)
 	  var multiple_nationalities = req.session.data['multiple_nationalities']
 	  var other_nationality = req.session.data['other_nationality']
 
@@ -49,36 +46,36 @@
 	// Route for /access-your-data
 
 	router.get('/single-brand/eu/dutch/registered', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
+
 	  var journey = req.session.data['journey']
 
 	  if (journey === 'multiple-brands' ) {
-	    // if user DOES mutiple nationalities
+	    // if users is verifying across MULTIPLE BRANDS
 	    res.redirect('/multiple-brands/eu/dutch/redirect')	 
 	  } else {
-	    // if user ONE nationality
+	    // if users is verifying across SINGLE BRAND
 	    res.render('single-brand/eu/dutch/registered/index.html')
 	  }
 	})
 
 	// Route for /passing-data
 
-	router.get('/multiple-brands/verify/account-created', function (req, res) {
+	router.get('/multiple-brands/confirm-your-details', function (req, res) {
 	  // get the answer from the query string (eg. ?over18=false)
 	  var journey = req.session.data['journey']
 
 	  if (journey === 'single-brand' ) {
-	    // if user DOES mutiple nationalities
+	    // if going through /single-brand journey
 	    res.redirect('/single-brand/confirm-your-details')
 	  } else if (journey === "share-code" ){
-	    // if user wants to login with MOBILE APP
+	    // if going through /share-code journey
 	    res.redirect('/share-code/confirm-your-details')
 	  } else if (journey === "send" ){
-	    // if user wants to login with MOBILE APP
+	    // if going through /send journey
 	    res.redirect('/send/confirm-your-details')	 
 	  } else {
-	    // if user ONE nationality
-	    res.render('multiple-brands/verify/account-created/index.html')
+	    // // if going through /multiple-brands journey
+	    res.render('multiple-brands/confirm-your-details/index.html')
 	  }
 	})
 
@@ -107,14 +104,14 @@
 	// Route for /share-code/used-service-before
 
 	router.get('/share-code/login-from-last-time', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
+
 	  var used_service_before = req.session.data['used_service_before']
 
 	  if (used_service_before === 'No' ) {
-	    // if user DOES mutiple nationalities
+	    // if user has NOT used service before
 	    res.redirect('/share-code/data-to-share')
 	  } else {
-	    // if user ONE nationality
+	    // if user HAS used service before
 	    res.render('share-code/login-from-last-time.html')
 	  }
 	})
@@ -123,30 +120,30 @@
 	// Route for /share-code/data-to-share
 
 	router.get('/share-code/intro-page', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
+
 	  var data_to_share = req.session.data['data_to_share']
 	  var specify_data = req.session.data['specify_data']
 
 	  if (data_to_share === 'other' && specify_data === undefined ) {
-	    // if user DOES mutiple nationalities
+	    // if users reason to share data ISN'T listed
 	    res.redirect('/share-code/specify-data')
 	  } else {
-	    // if user ONE nationality
+	    // if users reason to share data IS listed
 	    res.render('share-code/intro-page.html')
 	  }
 	})
 
-	// Route for /send/email/notify
+	// Route for /share-code/email/notify
 
 	router.get('/share-code/create-code/how-to-notify', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
+
 	  var notify = req.session.data['notify']
 
 	  if (notify === 'No' ) {
-	    // if user DOES mutiple nationalities
+	    // if user DOESN'T want to be notifed when information is checked
 	    res.redirect('/share-code/create-code/confirmation-page')
 	  } else {
-	    // if user ONE nationality
+	    // if user DOES want to be notifed when information is checked
 	    res.render('share-code/create-code/how-to-notify.html')
 	  }
 	})
@@ -156,14 +153,14 @@
 	// Route for /send/used-service-before
 
 	router.get('/send/login-from-last-time', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
+
 	  var used_service_before = req.session.data['used_service_before']
 
 	  if (used_service_before === 'No' ) {
-	    // if user DOES mutiple nationalities
+	    // if user has NOT used service before
 	    res.redirect('/send/data-to-share')
 	  } else {
-	    // if user ONE nationality
+	    // if user HAS used service before
 	    res.render('send/login-from-last-time.html')
 	  }
 	})
@@ -171,15 +168,15 @@
 	// Route for /send/data-to-share
 
 	router.get('/send/intro-page', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
+
 	  var data_to_share = req.session.data['data_to_share']
 	  var specify_data = req.session.data['specify_data']
 
 	  if (data_to_share === 'other' && specify_data === undefined ) {
-	    // if user DOES mutiple nationalities
+	    // if users reason to share data ISN'T listed
 	    res.redirect('/send/specify-data')
 	  } else {
-	    // if user ONE nationality
+	    // if users reason to share data IS listed
 	    res.render('send/intro-page.html')
 	  }
 	})
@@ -187,14 +184,14 @@
 	// Route for /send/email/notify
 
 	router.get('/send/email/how-to-notify', function (req, res) {
-	  // get the answer from the query string (eg. ?over18=false)
+
 	  var notify = req.session.data['notify']
 
 	  if (notify === 'No' ) {
-	    // if user DOES mutiple nationalities
+	    // if user DOESN'T want to be notifed when information is checked
 	    res.redirect('/send/email/confirmation-page')
 	  } else {
-	    // if user ONE nationality
+	    // if user DOES want to be notifed when information is checked
 	    res.render('send/email/how-to-notify.html')
 	  }
 	})

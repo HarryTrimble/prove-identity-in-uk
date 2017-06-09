@@ -1,50 +1,81 @@
-{% extends "layout-share-code.html" %}
+{% extends "layout-vary.html" %}
 
 {% block page_title %}
-  Example - Forms
+  Prove your identity in the UK
 {% endblock %}
 
 {% block content %}
-<main id="content" role="main">
+  
+  <main id="content" role="main">
+    <div class="grid-row">
+      <div class="column-two-thirds"> 
 
-  <a class="link-back" href="/share-code/used-service-before">Back</a>
+        <h1 class="heading-large">How did you login last time?
+        </h1>
 
-  <form action="#" method="post" class="form">
+        <form class="form" action="#" method="post">
 
-    <h1 class="form-title heading-large">
-      How did you access your detail last time?
-    </h1>
+          <table>
+            <tbody>
 
-    <div class="form-group">
-      <fieldset>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/royal-mail.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Royal Mail</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/post-office.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Post Office</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/citizensafe.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose CitizenSafe</a></td>
+                </tr>
 
-        <legend class="visually-hidden">How did you access your detail last time?</legend>
+              <tr>
+                <td>
+                  <img src="/public/images/digid-logo.png" id="digid-logo">
+                </td>
+                <td><a class="button" href="#" role="button">Choose Dutch identity details</a></td>
+              </tr>
 
-        <div class="multiple-choice">
-          <input id="radio-1" type="radio" name="login_from_last_time" value="Yes">
-          <label for="radio-1">GOV.UK Verify</label>
-        </div>
-        <div class="multiple-choice">
-          <input id="radio-1" type="radio" name="login_from_last_time" value="Yes">
-          <label for="radio-1">Online banking</label>
-        </div>
-        <div class="multiple-choice">
-          <input id="radio-3" type="radio" name="login_from_last_time" value="Can't remember">
-          <label for="radio-3">European ID</label>
-        </div>
-        <div class="multiple-choice">
-          <input id="radio-4" type="radio" name="login_from_last_time" value="Can't remember">
-          <label for="radio-4">Can't remember</label>
-        </div>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/experian.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Experian</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/morpho.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose SecureIdentity</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/digidentity.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Digidentity</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="/public/images/logos/barclays.png" class="company-logo">
+                  </td>
+                  <td><a class="button" href="#" role="button">Choose Barclays</a></td>
+                </tr>
 
-      </fieldset>
+            </tbody>
+          </table>
+
+        </form>
+
+      </div>
     </div>
+  </main>
 
-    <div class="form-group">
-      <input type="submit" class="button" value="Continue">
-    </div>
-
-  </form>
-
-</main>
 {% endblock %}
